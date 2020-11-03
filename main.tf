@@ -23,7 +23,8 @@ resource "google_compute_instance" "default" {
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]
   }
-  depends_on = [google_compute_instance.primary]
+ # Changes the order of build## 
+ depends_on = [google_compute_instance.primary]
 }
 
 resource "google_compute_instance" "primary" {
