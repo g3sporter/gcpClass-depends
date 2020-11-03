@@ -1,3 +1,9 @@
+provider "google" {
+ #credentials = "${file("/Users/bryan/hashicorp/bryanTest-d87f1249d43c.json")}"
+ project     = "bryantest"
+ region      = "us-west1"
+}
+
 resource "google_compute_instance" "default" {
   #count        = "${length(var.name_count)}"
   count        = length(var.name_count)
